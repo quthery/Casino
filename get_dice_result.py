@@ -73,7 +73,7 @@ def get_point(result_dice: int):
     if result_dice in (1, 22, 43):  # Стикер бара
         return 5
     elif result_dice in (6, 11, 16, 17, 27, 32, 33, 38, 48, 49, 54, 59):
-        return 3
+        return 2
     elif result_dice == 64:
         return 10
     else:
@@ -88,6 +88,6 @@ def get_result_text(result_dice: int, bid: int):
     if result > 0:
         text_for_gamer = f"Ваша комбинация:\r\n{comb}\r\nПоздравляем! Вы выиграли {point} очков"
     else:
-        text_for_gamer = f'Ваша комбинация:\r\n{comb}\r\nпроигранна Вы проиграли Попробуйте еще разок.'
+        text_for_gamer = f'Ваша комбинация:\r\n{comb}\r\nВы проиграли Попробуйте еще разок.'
 
     return point, text_for_gamer
